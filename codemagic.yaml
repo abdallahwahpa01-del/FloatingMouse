@@ -1,0 +1,26 @@
+workflows:
+  android-debug:
+    name: FloatingMouse APK
+    max_build_duration: 30
+    environment:
+      java: 17
+    scripts:
+      - name: Extract project if zipped
+        script: |
+          if [ -f "FloatingMouse_Fixed.zip" ]; then
+            unzip -o FloatingMouse_Fixed.zip
+            cp -r FloatingMouse/* . 2>/dev/null || true
+          fi
+      - name: Set Gradle permissions
+        script: chmod +x gradlew
+      - name: Build debug APK
+        script: ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/apk/debug/app-debug.apk
+    publishing:
+      email:
+        recipients:
+          - abdallahwahpa01@gmail.com
+        notify:
+          success: true
+          failure: true
