@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+    <rect
+        android:width="40"
+        android:height="40"
+        android:rx="8"
+        android:fillColor="#FF6200EE" />
+    <text
+        android:text="L"
+        android:textSize="20"
+        android:x="12"
+        android:y="28"
+        android:fillColor="#FFFFFFFF" />
+</vector>

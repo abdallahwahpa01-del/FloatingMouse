@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- Cursor -->
+    <ImageView
+        android:id="@+id/cursor"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_cursor"
+        android:contentDescription="Cursor"
+        android:layout_gravity="top|start" />
+
+    <!-- Control Panel -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="#CC000000"
+        android:layout_margin="8dp">
+
+        <!-- Joystick Container -->
+        <FrameLayout
+            android:id="@+id/joystickContainer"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#333333"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/joystickPad"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_joystick"
+                android:contentDescription="Joystick"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <!-- Click Buttons -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btnLeftClick"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_left_click"
+                android:contentDescription="Left Click"
+                android:layout_margin="4dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/button_background" />
+
+            <ImageView
+                android:id="@+id/btnRightClick"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_right_click"
+                android:contentDescription="Right Click"
+                android:layout_margin="4dp"
+                android:scaleType="centerInside"
+                android:background="@drawable/button_background" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
